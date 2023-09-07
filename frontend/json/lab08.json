@@ -1,0 +1,88 @@
+[
+    {
+      "id": 1,
+      "lab": "Lab-01",
+      "title": "Scanning and Identifying Network Nodes",
+      "scenario":"In this activity, you will use common network tools, such as local commands and the Nmap network mapper, to discover other hosts on the local network. Next, you will conduct a banner grabbing exercise to identify specific services on the hosts. Finally, you will use DNS tools to gather name resolution information. ",
+      "objective":"This lab is desigined to test your understanding of and ability to apply appropriate tools to assess organizational security defined in CompTIA Security+ ",
+      "url":"https://novnc.com/noVNC/vnc.html",
+      "activities":[
+        {
+            "id":1,
+            "title":"Identify the network configuration",
+            "desciption":"Determine the configuration of the local host and its subnet, using tools such as ifconfig, ip, arp, netdiscover, and pathping. Run the scans from the KALI Linux VM.",
+            "chekbox":true,
+            "questions":[
+                {
+                   "id":1,
+                   "question":"What is the IP address for the eth0 adapter of the Kali Linux virtual machine? (answer format: 1.2.3.4)",
+                   "answer":"10.10.10.1",
+                   "textbox":true
+                },
+                {
+                    "id":2,
+                    "question":"What is the IP address of the router? (format 1.2.3.4)",
+                    "answer":"10.10.10.1",
+                    "textbox":true
+                },
+                {
+                    "id":3,
+                    "question":"What is the IP address for the DC1.corp.515support.com virtual machine? (format 1.2.3.4)",
+                    "answer":"10.10.10.1",
+                    "textbox":true
+                },
+                {
+                    "id":4,
+                    "question":"How many hosts were found by netdiscover?",
+                    "answer":"4",
+                    "textbox":true
+                },
+                {
+                    "id":5,
+                    "question":"What is the IP address for the DC1 virtual machine?",
+                    "answer":"10.10.10.1",
+                    "textbox":true
+                },
+                {
+                    "id":6,
+                    "question":"What percentage of packets were lost during this test? (Reply with values such as 0%, 50%, 100%, etc)",
+                    "answer":"20%",
+                    "textbox":true
+                }
+            ]
+        },
+        {
+            "id":2,
+            "title":"Use nmap to discover hosts",
+            "desciption":"From a penetration tester or threat actor perspective, network reconnaissance will typically aim to discover the following.",
+            "chekbox":true,
+            "questions":[
+                {
+                   "id":1,
+                   "question":"What port is open on the virtual machine? (443/tcp, 22/tcp, 80/tcp, 53/udp, 161/udp)",
+                   "answer":"22/tcp",
+                   "textbox":true
+                },
+                {
+                    "id":2,
+                    "question":"What services are running on this virtual machine (the router)? (Email and file transfer services, SSH and web services, SSH and DNS services, Web and email services) ",
+                    "answer":"SSH and web services",
+                    "textbox":true
+                },
+                {
+                    "id":3,
+                    "question":"What operating system is running on the 10.1.0.254 host? (Linux, Windows 10, macOS, Windows Server, MS-DOS)",
+                    "answer":"Linux",
+                    "textbox":true
+                },
+                {
+                    "id":4,
+                    "question":"Which server is configured as an email server? (Hint: you'll need to look for the default SMTP port number in the 'Ports used' field of each host) (PC1, LX1, MS1, RT1-Internal, DC1)",
+                    "answer":"DC1",
+                    "textbox":true
+                }
+            ]
+        }
+      ]
+    }
+  ]
